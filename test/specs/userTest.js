@@ -15,6 +15,11 @@ describe('My Final Project Application', () => {
         await FinalProject.latitude5440Img3()
         await FinalProject.latitude5440Video()
         await FinalProject.latitude5440Img4()
+        await FinalProject.latitude5440Img5()
+        await FinalProject.latitude5440Img6()
+        await FinalProject.latitude5440Img7()
+        await FinalProject.latitude5440Img8()
+        await FinalProject.latitude5440Img9()
         await FinalProject.UpButton()
               
     })

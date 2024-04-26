@@ -51,6 +51,28 @@ class FinalProject extends testClass {
     get lat5440Img4Element(){
         return $('//button[@href="#mgal-img-4"]');
     }
+
+    get lat5440Img5Element(){
+        return $('//button[@href="#mgal-img-5"]');
+    }
+
+    get lat5440Img6Element(){
+        return $('//button[@href="#mgal-img-6"]');
+    }
+
+    get lat5440Img7Element(){
+        return $('//button[@href="#mgal-img-7"]');
+    }
+
+    get lat5440Img8Element(){
+        return $('//button[@href="#mgal-img-8"]');
+    }
+
+    get lat5440Img9Element(){
+        return $('//button[@href="#mgal-img-9"]');
+    }
+
+
    
     get UpButtonElement(){
         return $('//button[@class="up-prev"]');
@@ -99,6 +121,25 @@ class FinalProject extends testClass {
         await this.lat5440Img4Element.click()
     }
 
+    async latitude5440Img5 (){
+        (await this.lat5440Img5Element).click()
+    }
+
+    async latitude5440Img6 (){
+        (await this.lat5440Img6Element).click()
+    }
+
+    async latitude5440Img7 (){
+        (await this.lat5440Img7Element).click()
+    }
+    
+    async latitude5440Img8 (){
+        (await this.lat5440Img8Element).click()
+    }
+
+    async latitude5440Img9 (){
+        (await this.lat5440Img9Element).click()
+    }
     async UpButton (){
         await this.UpButtonElement.click()
     }
