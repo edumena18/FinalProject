@@ -44,6 +44,10 @@ class FinalProject extends testClass {
         return $('//button[@href="#mgal-img-3"]');
     }
 
+    get downButtonElement (){
+        return $('//button[@class="down-next"]');
+    }
+
     get lat5440VidElement(){
         return $('//button[@href="#mgal-vid-1"]');
     }
@@ -72,11 +76,23 @@ class FinalProject extends testClass {
         return $('//button[@href="#mgal-img-9"]');
     }
 
-
-   
     get UpButtonElement(){
         return $('//button[@class="up-prev"]');
     }
+
+    // get popUpElement(){
+    //     return $('//button[@class="email-close-btn"]');
+    // }
+    /** Selectors "move mouse over images" */
+
+    get moveMouseImg1Element(){
+        return $('//li[@class="active-group active"]/button[@href="#mgal-img-1"]');
+    }
+
+    get popUpCloseButton (){
+        return $('//button[@class="email-close-btn"]');
+    }
+    //li[@class="active-group active"]/button[@href="#mgal-img-1"]'
     /**
      * Functions declared for Dell website test
      */
@@ -117,6 +133,10 @@ class FinalProject extends testClass {
         await this.lat5440VidElement.click()
     }
 
+    async downButton (){
+        (await this.downButtonElement).click()
+    }
+
     async latitude5440Img4 (){
         await this.lat5440Img4Element.click()
     }
@@ -142,8 +162,52 @@ class FinalProject extends testClass {
     }
     async UpButton (){
         await this.UpButtonElement.click()
+        await this.UpButtonElement.waitForClickable({ timeout: 2000 }) 
+        await this.UpButtonElement.click()
+
     }
 
+    async moveMouseImg1 (){
+        //await this.moveMouseImg1Element.moveTo();
+        await this.moveMouseImg1Element.click();
+        
+    }
+    
+    async popUpClose (){
+        if (await this.popUpCloseButton.waitForExist({timeout:250}) == true)
+            await this.popUpCloseButton.click();
+    }
+
+    async getThePopUp(){
+        try {
+            await this.goToUrl()
+            await this.burguerMenu()
+            await this.ComputerAccesories()
+            await this.laptops()
+            await this.latitud()
+            await this.latitude5440()
+            await this.latitude5440Img1()
+            await this.latitude5440Img2()
+            await this.latitude5440Img3()
+            await this.latitude5440Video()
+            await this.downButton()
+            await this.latitude5440Img4()
+            await this.latitude5440Img5()
+            await this.latitude5440Img6()
+            await this.latitude5440Img7()
+            await this.latitude5440Img8()
+            await this.latitude5440Img9()
+            await this.UpButton()
+            await this.popUpClose()
+            await this.moveMouseImg1()
+        }
+        catch{
+            this.popUpClose()
+        }
+
+    }
+
+    //...'//button[@class="email-close-btn"]'
     // /**
     //  * overwrite specific options to adapt it to page object
     //  */
