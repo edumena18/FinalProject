@@ -6,7 +6,7 @@ import PopUp from '../pageobjects/popUp.js'
 
 describe('My Final Project Application', () => {
     it('should navigate the products page', async () => {
-      await PopUp.closePopupCheckLaptop()
+      await PopUp.laptopPopUpCatch()
              
     })
 })

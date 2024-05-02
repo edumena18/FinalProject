@@ -25,20 +25,12 @@ class MainMenu extends TestClass {
 
     //Functions
 
-    async burguerMenu (){
+    async goToLaptop(){
         await this.burguerMenuElement.click()
-    }
-    
-    async ComputerAccesories (){
         await this.computerAccElement.click()
-    }
-    
-    async laptops (){
         await this.laptopsElement.click()
-    }
-    
-    async latitud (){
         await this.latitudElement.click()
     }
+
 }  
 export default new MainMenu();
