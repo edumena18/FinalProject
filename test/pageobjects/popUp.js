@@ -25,17 +25,22 @@ class PopUp extends TestClass {
     }
 
     async testLaptop(){
-        await this.goToUrl()
+        await this.goToUrl('')
         await MainMenu.goToLaptop()
         await Product.checking5440Images()
         await Configuration.selectBothConfigurations()
         await Model.modelConfiguration()
     }
 
-
-    goToUrl () {
-        return super.goToUrl();
-
+    async images5440(){
+        await this.goToUrl('shop/dell-laptops/latitude-5440-laptop/spd/latitude-14-5440-laptop/')
+        await browser.pause(10000)
+        await Product.checking5440Images()
     }
+
+    // goToUrl () {
+    //     return super.goToUrl();
+
+    // }
 }
 export default new PopUp();

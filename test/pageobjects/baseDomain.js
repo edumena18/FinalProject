@@ -9,7 +9,7 @@ export default class TestClass {
     * Opens a sub page of the page
     * @param path path of the sub page (e.g. /path/to/page.html)
     */
-    goToUrl () {
-        return browser.url('https://www.dell.com/en-us')
+    goToUrl (endpoint) {
+        return browser.url(`https://www.dell.com/en-us/${endpoint}`)
     }
 }

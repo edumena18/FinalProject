@@ -99,7 +99,7 @@ class Product extends TestClass {
      //Functions
 
     async moveMouseImages(number){
-        $(`//li[@class="active-group active"]/button[@href="#mgal-img-${number}"]`)
+       return $(`//li[@class="active-group active"]/button[@href="#mgal-img-${number}"]`)
     }
 
     async latitude5440Video (){
@@ -124,7 +124,7 @@ class Product extends TestClass {
     }
 
     async selectAllImages(){
-        await this.latitude5440Element.click()
+        // await this.latitude5440Element.click()
         await this.lat5440Img1Element.click()
         await this.lat5440Img2Element.click()
         await this.lat5440Img3Element.click()

@@ -30,6 +30,8 @@ class MainMenu extends TestClass {
         await this.computerAccElement.click()
         await this.laptopsElement.click()
         await this.latitudElement.click()
+        await this.latitude5440Element.click()
+        
     }
 
 }  
