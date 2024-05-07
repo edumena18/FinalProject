@@ -3,10 +3,11 @@
 import mainMenu from '../pageobjects/mainMenu.js'
 import Product from '../pageobjects/5440laptop.js'
 import PopUp from '../pageobjects/popUp.js'
+import TestClass from '../pageobjects/baseDomain.js';
 
-describe('Check Laptop images', () => {
-    it('Click in all of them', async () => {
-      await PopUp.images5440PopUp()
+describe('Navegate Computer & Accesories Menu', () => {
+    it('Click each submenu/Laptops/Latitude Laptop/Latitude 5440 ', async () => {
+      await PopUp.navigateMenuPopUp()
              
     })
 })

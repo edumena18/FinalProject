@@ -22,7 +22,8 @@ class Model extends TestClass{
         return $('//a[@href="/en-us/shop/laptops/new-15-5550/spd/latitude-15-5550-laptop"]');
     }
     
-    async modelConfiguration(){
+    async model(){
+        await this.goToUrl('shop/laptops/14-5440/spd/latitude-14-5440-laptop')
         await this.modelElemnt.click()
         await this.model15Element.click()
         await browser.pause(3000)

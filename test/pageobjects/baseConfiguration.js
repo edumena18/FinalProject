@@ -3,6 +3,7 @@ import { expect } from '@wdio/globals';
 import TestClass from './baseDomain.js';
 
 class Configuration extends TestClass {
+
     get configuration5450Element() {
         return $('//a[contains(text(), "New 14” 5450")]');
     }
@@ -23,6 +24,8 @@ class Configuration extends TestClass {
 
     //}
     async selectBothConfigurations (){
+        await this.goToUrl('shop/laptops/14-5440/spd/latitude-14-5440-laptop')
+        await expect(this.configuration5450Element).toExist()
         await this.configuration5450Element.click()
         await this.configuration5440Element.click()
     }
@@ -32,5 +35,6 @@ class Configuration extends TestClass {
     //     await this.configuration5440Element.click()
     // }
 }
+
 export default new Configuration();
 

@@ -3,10 +3,7 @@ import { expect } from '@wdio/globals';
 import TestClass from './baseDomain.js';
 
 class Product extends TestClass {
-    get latitude5440Element(){
-        return $('//a[contains(text(), "Latitude 5440 Laptop")]');
-    }
-
+    
     //Selectors testing Images & Video of the product Dell Latitude 5440
 
     get lat5440Img1Element(){
@@ -107,6 +104,7 @@ class Product extends TestClass {
     }    
 
     async checking5440Images(){
+        await this.goToUrl('shop/dell-laptops/latitude-5440-laptop/spd/latitude-14-5440-laptop/')
         await this.selectAllImages()
         await this.doubleClickUp()
         await this.highlightImages()

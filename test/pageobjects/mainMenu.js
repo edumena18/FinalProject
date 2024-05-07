@@ -6,6 +6,9 @@ class MainMenu extends TestClass {
     /**
      * define selectors using getter methods
      */
+    get latitude5440Element(){
+        return $('//a[contains(text(), "Latitude 5440 Laptop")]');
+    }
     
     get burguerMenuElement(){
         return $('.mh-top-nav');
@@ -26,6 +29,7 @@ class MainMenu extends TestClass {
     //Functions
 
     async goToLaptop(){
+        await this.goToUrl('')
         await this.burguerMenuElement.click()
         await this.computerAccElement.click()
         await this.laptopsElement.click()
