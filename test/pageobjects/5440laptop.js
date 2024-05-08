@@ -112,27 +112,39 @@ class Product extends TestClass {
     }
 
     async doubleClickUp(){
+        await expect(this.UpButtonElement).toExist()
         await this.UpButtonElement.click()
         await this.UpButtonElement.click()
     }
 
     async doubleClickDown(){
+        await expect(this.downButtonElement).toExist()
         await this.downButtonElement.click()
         await this.downButtonElement.click()
     }
 
     async selectAllImages(){
-        // await this.latitude5440Element.click()
+        await expect(this.lat5440Img1Element).toExist()
         await this.lat5440Img1Element.click()
+        await expect(this.lat5440Img2Element).toExist()
         await this.lat5440Img2Element.click()
+        await expect(this.lat5440Img3Element).toExist()
         await this.lat5440Img3Element.click()
+        await expect(this.lat5440VidElement).toExist()
         await this.lat5440VidElement.click()
+        await expect(this.downButtonElement).toExist()
         await this.downButtonElement.click()
+        await expect(this.lat5440Img4Element).toExist()
         await this.lat5440Img4Element.click()
+        await expect(this.lat5440Img5Element).toExist()
         await this.lat5440Img5Element.click()
+        await expect(this.lat5440Img6Element).toExist()
         await this.lat5440Img6Element.click()
+        await expect(this.lat5440Img7Element).toExist()
         await this.lat5440Img7Element.click()
+        await expect(this.lat5440Img8Element).toExist()
         await this.lat5440Img8Element.click()
+        await expect(this.lat5440Img9Element).toExist()
         await this.lat5440Img9Element.click()
     }
 

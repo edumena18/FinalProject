@@ -8,10 +8,10 @@ class Model extends TestClass{
         return $('//div[@class="variant-dropdown mb-6 dropdown"]');
     }
 
-    // get model13Element(){
-    //     return $('//a[@href="/en-us/shop/laptops/13-5340/spd/latitude-13-5340-2-in-1-laptop"]');
-            
-    // }
+    get model13Element(){
+        return $('//a[@href="/en-us/shop/laptops/13-5340/spd/latitude-13-5340-2-in-1-laptop"]');
+                
+    }
 
     get model14Element(){
         //return $('//div/a[@href="#"][contains(text(), "14")]');
@@ -26,10 +26,12 @@ class Model extends TestClass{
         await this.goToUrl('shop/laptops/14-5440/spd/latitude-14-5440-laptop')
         await this.modelElemnt.click()
         await this.model15Element.click()
-        await browser.pause(3000)
+        await browser.pause(1000)
         await this.modelElemnt.click()
         await this.model14Element.click()
-        await browser.pause(3000)
+        await browser.pause(1000)
+        await this.modelElemnt.click()
+        await this.model13Element.click()
        //await this.model13Element.click()
     }
 }
