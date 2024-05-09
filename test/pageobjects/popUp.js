@@ -64,6 +64,7 @@ class PopUp extends TestClass {
         catch(originalError){
         console.log("************HERE IS THE ERROR WHEN THE POP UP HAPPENED OR DIDN'T HAPPEN******** : " + originalError)
             //await browser.pause(4000)
+            //await this.popUpCloseButton.waitForClickable()
             await this.popUpCloseButton.click()
             //await browser.pause(2000)
             await Configuration.selectBothConfigurations()
