@@ -23,13 +23,15 @@ class Model extends TestClass{
     
     async model(){
         await this.goToUrl('shop/laptops/14-5440/spd/latitude-14-5440-laptop')
+        await expect(this.modelElemnt).toExist()
         await this.modelElemnt.click()
+        await expect(this.model15Element).toExist()
         await this.model15Element.click()
-        await browser.pause(1000)
         await this.modelElemnt.click()
+        await expect(this.model14Element).toExist()
         await this.model14Element.click()
-        await browser.pause(1000)
         await this.modelElemnt.click()
+        await expect(this.model13Element).toExist()
         await this.model13Element.click()
     }
 }
