@@ -11,81 +11,51 @@ class PopUp extends TestClass {
     get popUpCloseButton (){
         return $('//button[@class="email-close-btn"]');
     }
-    
-    // async laptopPopUpCatch(){
-    //     try {await this.testLaptop()
-    //     }
-    //     catch(originalError){
-    //     console.log("************HERE IS THE ERROR WHEN THE POP UP HAPPENED OR DIDN'T HAPPEN******** : " + originalError)
-    //         await browser.pause(4000)
-    //         await this.popUpCloseButton.click()
-    //         await browser.pause(2000)
-    //         await this.testLaptop()
-    //     }
-    // }
-
-    // async testLaptop(){
-    //     // await this.goToUrl('')
-    //     await MainMenu.goToLaptop()
-    //     await Product.checking5440Images()
-    //     await Configuration.selectBothConfigurations()
-    //     await Model.modelConfiguration()
-    // }
 
     async images5440PopUp(){
-        //await this.goToUrl('shop/dell-laptops/latitude-5440-laptop/spd/latitude-14-5440-laptop/'  
+        await browser.maximizeWindow(); 
         try {await Product.checking5440Images()
         }
         catch(originalError){
         console.log("************HERE IS THE ERROR WHEN THE POP UP HAPPENED OR DIDN'T HAPPEN******** : " + originalError)
-            //await browser.pause(4000)
             await this.popUpCloseButton.click()
-            //await browser.pause(2000)
             await Product.checking5440Images()
         }    
     }
     
     async navigateMenuPopUp(){
-        
+        await browser.maximizeWindow();
         try {await MainMenu.goToLaptop()
         }
         catch(originalError){
         console.log("************HERE IS THE ERROR WHEN THE POP UP HAPPENED OR DIDN'T HAPPEN******** : " + originalError)
-            //await browser.pause(4000)
             await this.popUpCloseButton.click()
-            //await browser.pause(2000)
             await MainMenu.goToLaptop()
         }         
     }
 
     async configurationPopUp(){
+        await browser.maximizeWindow();
         try {await Configuration.selectBothConfigurations()
         }
         catch(originalError){
         console.log("************HERE IS THE ERROR WHEN THE POP UP HAPPENED OR DIDN'T HAPPEN******** : " + originalError)
-            //await browser.pause(4000)
-            //await this.popUpCloseButton.waitForClickable()
             await this.popUpCloseButton.click()
-            //await browser.pause(2000)
             await Configuration.selectBothConfigurations()
         }
     }
 
     async modelPopUp(){
+        await browser.maximizeWindow();
         try {await Model.model()
         }
         catch(originalError){
         console.log("************HERE IS THE ERROR WHEN THE POP UP HAPPENED OR DIDN'T HAPPEN******** : " + originalError)
-            await browser.pause(4000)
+            await browser.pause(1000)
             await this.popUpCloseButton.click()
-            await browser.pause(2000)
+            await browser.pause(1000)
             await Model.model()
         }
     }
-
-    // goToUrl () {
-    //     return super.goToUrl();
-
-    // }
 }
 export default new PopUp();

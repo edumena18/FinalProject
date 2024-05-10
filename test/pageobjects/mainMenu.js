@@ -30,10 +30,15 @@ class MainMenu extends TestClass {
 
     async goToLaptop(){
         await this.goToUrl('')
+        await expect(this.burguerMenuElement).toExist()
         await this.burguerMenuElement.click()
+        await expect(this.computerAccElement).toExist()
         await this.computerAccElement.click()
+        await expect(this.laptopsElement).toExist()
         await this.laptopsElement.click()
+        await expect(this.latitudElement).toExist()
         await this.latitudElement.click()
+        await expect(this.latitude5440Element).toExist()
         await this.latitude5440Element.click()
         
     }

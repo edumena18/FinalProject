@@ -79,18 +79,6 @@ class Configuration extends TestClass {
     }
 
    
-
-    // async configuration5440 (){
-    //     await this.configuration5440Element.click()
-    // }
-
-    // configuration1 = this.configuration5440Element
-    // configuration2 = this.configuration5450Element
-
-    // if (configuration1){
-    //     this.configuration5440()
-
-    //}
     async selectBothConfigurations (){
         await this.goToUrl('shop/laptops/14-5440/spd/latitude-14-5440-laptop')
         await expect(this.configuration5450Element).toExist()
@@ -110,8 +98,6 @@ class Configuration extends TestClass {
         await expect(this.highlightCamera5450).toExist()
         await expect(this.highlightSystemsManagement5450).toExist()
         await expect(this.highlightPalmRest5450).toExist()
-
-
 }
 
 async checkingHighlight5440Laptop(){
@@ -123,7 +109,6 @@ async checkingHighlight5440Laptop(){
     await expect(this.highlightCamera5440).toExist()
     await expect(this.highlightSystemsManagement5440).toExist()
     await expect(this.highlightPalmRest5440).toExist()
-
 }
    }
    

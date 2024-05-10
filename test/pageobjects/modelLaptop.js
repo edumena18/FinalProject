@@ -14,7 +14,6 @@ class Model extends TestClass{
     }
 
     get model14Element(){
-        //return $('//div/a[@href="#"][contains(text(), "14")]');
         return $('//a[@href="/en-us/shop/laptops/14-5440/spd/latitude-14-5440-laptop"]');
     }
 
@@ -32,7 +31,6 @@ class Model extends TestClass{
         await browser.pause(1000)
         await this.modelElemnt.click()
         await this.model13Element.click()
-       //await this.model13Element.click()
     }
 }
 export default new Model();

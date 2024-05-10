@@ -108,7 +108,6 @@ class Product extends TestClass {
         await this.selectAllImages()
         await this.doubleClickUp()
         await this.highlightImages()
-
     }
 
     async doubleClickUp(){
@@ -160,6 +159,5 @@ class Product extends TestClass {
         await this.moveMouseImages('8')
         await this.moveMouseImages('9')
     }
-
 }
 export default new Product();
