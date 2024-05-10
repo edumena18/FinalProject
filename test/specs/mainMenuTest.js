@@ -1,7 +1,7 @@
 //import { expect } from '@wdio/globals'
 //import login from '../pageobjects/menuMenu.js'
 import mainMenu from '../pageobjects/mainMenu.js'
-import Product from '../pageobjects/5440laptop.js'
+import Product from '../pageobjects/Images5440Laptop.js'
 import PopUp from '../pageobjects/popUp.js'
 import TestClass from '../pageobjects/baseDomain.js';
 

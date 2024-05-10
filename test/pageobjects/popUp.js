@@ -2,7 +2,7 @@ import { $ } from '@wdio/globals';
 import { expect } from '@wdio/globals';
 import TestClass from './baseDomain.js';
 import MainMenu from './mainMenu.js'
-import Product from './5440laptop.js'
+import Product from './Images5440Laptop.js'
 import Configuration from './baseConfiguration.js'
 import Model from './modelLaptop.js'
 
