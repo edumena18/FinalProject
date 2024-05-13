@@ -47,14 +47,14 @@ class PopUp extends TestClass {
 
     async modelPopUp(){
         await browser.maximizeWindow();
-        try {await Model.model()
+        try {await Model.model5440Laptop()
         }
         catch(originalError){
         console.log("************HERE IS THE ERROR WHEN THE POP UP HAPPENED OR DIDN'T HAPPEN******** : " + originalError)
             await browser.pause(1000)
             await this.popUpCloseButton.click()
             await browser.pause(1000)
-            await Model.model()
+            await Model.model5440Laptop()
         }
     }
 }

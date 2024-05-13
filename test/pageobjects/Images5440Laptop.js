@@ -3,8 +3,6 @@ import { expect } from '@wdio/globals';
 import TestClass from './baseDomain.js';
 
 class Product extends TestClass {
-    
-    //Selectors testing Images & Video of the product Dell Latitude 5440
 
     get lat5440Img1Element(){
         return $('//button[@href="#mgal-img-1"]');
@@ -93,21 +91,15 @@ class Product extends TestClass {
     get moveMouseImg9Element(){
         return $('//li[@class="active-group active"]/button[@href="#mgal-img-9"]');
     }
-     //Functions
 
     async moveMouseImages(number){
        return $(`//li[@class="active-group active"]/button[@href="#mgal-img-${number}"]`)
-    }
-
-    async latitude5440Video (){
-        await this.lat5440VidElement.moveTo()
-    }    
+    }   
 
     async checking5440Images(){
         await this.goToUrl('shop/dell-laptops/latitude-5440-laptop/spd/latitude-14-5440-laptop/')
         await this.selectAllImages()
         await this.doubleClickUp()
-        await this.highlightImages()
     }
 
     async doubleClickUp(){
@@ -147,17 +139,5 @@ class Product extends TestClass {
         await this.lat5440Img9Element.click()
     }
 
-    async highlightImages(){
-        await this.moveMouseImages('1')
-        await this.moveMouseImages('2')
-        await this.moveMouseImages('3')
-        await this.latitude5440Video()
-        await this.moveMouseImages('4')
-        await this.moveMouseImages('5')
-        await this.moveMouseImages('6')
-        await this.moveMouseImages('7')
-        await this.moveMouseImages('8')
-        await this.moveMouseImages('9')
-    }
 }
 export default new Product();

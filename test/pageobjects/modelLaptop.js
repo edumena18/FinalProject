@@ -21,7 +21,7 @@ class Model extends TestClass{
         return $('//a[@href="/en-us/shop/laptops/new-15-5550/spd/latitude-15-5550-laptop"]');
     }
     
-    async model(){
+    async model5440Laptop(){
         await this.goToUrl('shop/laptops/14-5440/spd/latitude-14-5440-laptop')
         await expect(this.modelElemnt).toExist()
         await this.modelElemnt.click()

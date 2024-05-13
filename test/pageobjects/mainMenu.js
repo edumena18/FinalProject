@@ -3,9 +3,7 @@ import { expect } from '@wdio/globals';
 import TestClass from './baseDomain.js';
 
 class MainMenu extends TestClass {
-    /**
-     * define selectors using getter methods
-     */
+   
     get latitude5440Element(){
         return $('//a[contains(text(), "Latitude 5440 Laptop")]');
     }
@@ -25,8 +23,6 @@ class MainMenu extends TestClass {
     get latitudElement(){
         return $('//a[contains(text(), "Latitude Laptops")]');
     }
-
-    //Functions
 
     async goToLaptop(){
         await this.goToUrl('')
